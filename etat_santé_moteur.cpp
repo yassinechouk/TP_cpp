@@ -23,7 +23,7 @@ class accelometre : public capteur {
 public:
     accelometre(): capteur("accelometre", "m.s^-2") {}
     double lirevaleur() override {
-        return (rand() % 1000) / 100.0;
+        return (rand() % 1001) / 100.0;
     }
 };
 
