@@ -11,7 +11,10 @@ protected:
     string nom;
     string unite;
 public:
-    capteur(string n, string u): nom(n), unite(u) {}
+    capteur(string n, string u) {
+        nom=n;
+        unite=u;
+    }
     virtual double lirevaleur() = 0;
     virtual ~capteur() {}
 };
@@ -29,7 +32,8 @@ private:
     vector<double> buffer;
     int capacity;
 public:
-    analyseur_vibration(int cap = 10): capacity(cap) {
+    analyseur_vibration(int cap = 10) {
+        capacity =cap;
         buffer.reserve(cap);
     }
     void ajoutmesure(double v) {
